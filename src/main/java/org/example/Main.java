@@ -10,4 +10,16 @@ public class Main {
                 .replaceAll("4", "o")
                 .replaceAll("5", "u");
     }
+    public static String decodeConsonants(String word) {
+        StringBuilder decodedWord = new StringBuilder();
+        for (char ch : word.toCharArray()) {
+            if (Character.isLetter(ch) && !"aeiouAEIOU".contains(String.valueOf(ch))) {
+                decodedWord.append((char) (ch - 1));
+            } else {
+                decodedWord.append(ch);
+            }
+        }
+        return decodedWord.toString();
+    }
+
 }
