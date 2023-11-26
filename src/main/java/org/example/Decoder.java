@@ -20,7 +20,7 @@ public class Decoder {
         for (char ch : word.toCharArray()) {
             if (Character.isLetter(ch) && !"aeiouAEIOU".contains(String.valueOf(ch))) {
                 int diff = ch - 'a';
-                if (diff < 0 || diff > 20) { // Літери від 'b' до 'z'
+                if (diff < 0 || diff > 20) {
                     System.out.println("String isn`t encoded by 2nd method");
                     return false;
                 }
